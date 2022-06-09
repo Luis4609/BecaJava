@@ -16,13 +16,16 @@ Práctica Java en Optimissa
 ### Capítulo 4: Operadores y Sentencias (9/06/2022)
 
 - Operadores
- - Aritméticos
- - Lógicos
- - Autoincremento
- - Asignación
- - Relacionales
- - Cortocircuito
- - Condicionales
+<ol>
+  <li>Aritméticos</li>
+  <li>Lógicos</li>
+  <li>Autoincremento</li>
+  <li>Asignación</li>
+  <li>Relacionales</li>
+  <li>Lógicos</li>
+  <li>Cortocircuito</li>
+  <li>Condicionales</li>
+</ol>
 
 - Casting
 - Sentencias
