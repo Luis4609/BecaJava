@@ -13,9 +13,9 @@ import java.util.ArrayList;
 public class Person {
 
 	// Atributes of the Person class
-	String personName;
-	String personFirstSurname;
-	String personSecondSurname;
+	private String personName;
+	private String personFirstSurname;
+	private String personSecondSurname;
 
 	/**
 	 * @param personName
@@ -56,7 +56,7 @@ public class Person {
 	 * Se deberá generar el trigrama de dicho nombre: Inicial del nombre, inicial
 	 * del primer apellido y final del último apellido (puede tener 1 o 2).
 	 */
-	private String generateTriagram() {
+	public String generateTriagram() {
 
 		String personTriagram = "";
 
@@ -80,7 +80,6 @@ public class Person {
 		try {
 			System.out.println("Nombre generado: " + personName + " " + personFirstSurname + " " + personSecondSurname);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -88,7 +87,7 @@ public class Person {
 	/**
 	 * @return List of Persons
 	 */
-	private static ArrayList<Person> generatePersonList() {
+	public static ArrayList<Person> generatePersonList() {
 
 		ArrayList<Person> personList = new ArrayList<Person>();
 
@@ -99,6 +98,9 @@ public class Person {
 		Person person4 = new Person("Manuel", "Perez", "Alvarez");
 		Person person5 = new Person("Manolo", "Paco", "Alvarez");
 		Person person6 = new Person("Jose", "Fernandez", "Gonzales");
+		Person person7 = new Person("Jose", "Felipez", "Gonzales");
+		Person person8 = new Person("Pedro", "Manolo", "Gonzales");
+		Person person9 = new Person("Alberto", "Teniente", "Pepe");
 
 		// add persons to Array of Persons
 		personList.add(person1);
@@ -109,43 +111,47 @@ public class Person {
 		personList.add(person5);
 		// 6 equal to 2
 		personList.add(person6);
+		personList.add(person7);
+
+		// Different persons
+		personList.add(person8);
+		personList.add(person9);
+
+		System.out.println("Size personList:" + personList.size());
 
 		return personList;
 	}
 
 	/**
-	 * @return number of Persons with the same Triagram
+	 * De una lista de personas, se deberán sacar las estadísticas de cuántas tienen
+	 * el mismo trigrama.
+	 * 
+	 * @return
 	 */
-	private static int getTriagramStatistics(ArrayList<Person> personList) {
+	public static int getTriagramStatistics(ArrayList<Person> personList) {
 
 		int numberOfPersonsWithSameTriagram = 0;
-		int nameWithSameTriagram = 0;
+		int numberOfRepeatedTriagrams = 0;
 
 		if (personList == null || personList.size() == 0) {
 			return 0;
 		} else {
 			// Check if a person has the same Triagram
-			int count = 0;
 
 			ArrayList<String> triagramArray = new ArrayList<String>();
-			System.out.println("Number: " + numberOfPersonsWithSameTriagram);
 
 			for (Person person : personList) {
-
-				if (triagramArray.contains(person.generateTriagram())) {
-					count++;
-					nameWithSameTriagram++;
-				} else {
+				// Si el Tiagrama se encuentra en el array, se suma, si no se encuentra se añade
+				if (!triagramArray.contains(person.generateTriagram())) {
 					triagramArray.add(person.generateTriagram());
-				}
-
-				if (count > 1) {
-					numberOfPersonsWithSameTriagram++;
+				} else {
+					numberOfRepeatedTriagrams++;
 				}
 			}
-			System.out.println("Name with same triagrams: " + nameWithSameTriagram);
+
 		}
-		return numberOfPersonsWithSameTriagram;
+		System.out.println("Number of times a triagram repeat: " + (numberOfRepeatedTriagrams));
+		return numberOfPersonsWithSameTriagram + numberOfRepeatedTriagrams;
 	}
 
 	/**
@@ -157,9 +163,11 @@ public class Person {
 		Person person = new Person("Pepe", "Perez", "Rodriguez");
 		person.generatePersonName();
 		person.generateTriagram();
+		System.out.println("toString() = " + person.toString());
 
 		// show stats for the triagrams of the list
-		System.out.println("Triagram stats: " + getTriagramStatistics(generatePersonList()));
+		System.out.println("Triagram stats (numero de veces que se repite el mismo Triagrama) = "
+				+ getTriagramStatistics(generatePersonList()));
 	}
 
 	public String toString() {
