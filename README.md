@@ -49,7 +49,7 @@ Práctica Java en Optimissa
 - Encapsulamiento
 
 
-### Diseño de clases
+### Capítulo 7: Diseño de clases
 
 - Hereencia
 - Clases abstractas
@@ -57,7 +57,7 @@ Práctica Java en Optimissa
 - Polimorfismo
 - Lambdas
 
-### Excepciones
+### Capítulo 8: Excepciones
 
 
 ## Enlaces
