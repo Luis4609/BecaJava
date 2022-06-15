@@ -30,3 +30,37 @@ Práctica Java en Optimissa
 - Casting
 - Sentencias
 - Bucles
+
+### Capítulo 5: API de Java
+
+- String
+- Array
+- ArrayList
+- Date
+
+### Capítulo 6: Métodos y encapsulamiento
+
+- Diseñando métodos
+- varargs
+- Modificadores de acceso
+- Pasando datos a tráves de métodos
+- Sobrecarga
+- Constructores
+- Encapsulamiento
+
+
+### Diseño de clases
+
+- Hereencia
+- Clases abstractas
+- Interfaces
+- Polimorfismo
+- Lambdas
+
+### Excepciones
+
+
+## Enlaces
+
+- OOP: https://www.ibm.com/docs/es/spss-modeler/SaaS?topic=language-object-oriented-programming
+- Deep copy: https://www.baeldung.com/java-deep-copy
