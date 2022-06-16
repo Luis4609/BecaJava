@@ -65,3 +65,9 @@ Práctica Java en Optimissa
 - OOP: https://www.ibm.com/docs/es/spss-modeler/SaaS?topic=language-object-oriented-programming
 - Deep copy: https://www.baeldung.com/java-deep-copy
 - Cohesion: https://www.geeksforgeeks.org/cohesion-in-java/
+
+## Teoría: 
+
+- Microservicios AWS: https://aws.amazon.com/es/microservices/
+- Microservicios Red Hat: https://www.redhat.com/es/topics/microservices
+- Microservicios Spring: https://spring.io/microservices
