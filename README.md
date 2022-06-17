@@ -71,3 +71,8 @@ Práctica Java en Optimissa
 - Microservicios AWS: https://aws.amazon.com/es/microservices/
 - Microservicios Red Hat: https://www.redhat.com/es/topics/microservices
 - Microservicios Spring: https://spring.io/microservices
+
+## Teoría: UML
+
+- Diagrama de clases: https://diagramasuml.com/diagrama-de-clases/
+- Dibujar UML: https://moqups.com/es/templates/diagrams-flowcharts/uml-diagrams/class-diagram/
