@@ -11,7 +11,7 @@ Práctica Java en Optimissa
 - Declarando e inicializando
 - Variables en Java
 - Ordenando elementos en una clase
-- Destruyendo objetos
+- Objetos
 
 ### Capítulo 4: Operadores y Sentencias (9/06/2022)
 
