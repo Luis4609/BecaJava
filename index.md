@@ -4,34 +4,82 @@ You can use the [editor on GitHub](https://github.com/Luis4609/BecaJava/edit/gh-
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+# BecaJava
+Práctica Java en Optimissa
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Capítulo 3: Bloques Básicos de Java (8/06/2022)
 
-```markdown
-Syntax highlighted code block
+- Estructura de clases
+- main()
+- Paquetes e importaciones
+- Crear objetos
+- Diferencia entre referencia a objeto y datos primitivos
+- Declarando e inicializando
+- Variables en Java
+- Ordenando elementos en una clase
+- Objetos
 
-# Header 1
-## Header 2
-### Header 3
+### Capítulo 4: Operadores y Sentencias (9/06/2022)
 
-- Bulleted
-- List
+- Operadores
+<ol>
+  <li>Aritméticos</li>
+  <li>Lógicos</li>
+  <li>Autoincremento</li>
+  <li>Asignación</li>
+  <li>Relacionales</li>
+  <li>Lógicos</li>
+  <li>Cortocircuito</li>
+  <li>Condicionales</li>
+</ol>
 
-1. Numbered
-2. List
+- Casting
+- Sentencias
+- Bucles
 
-**Bold** and _Italic_ and `Code` text
+### Capítulo 5: API de Java
 
-[Link](url) and ![Image](src)
-```
+- String
+- Array
+- ArrayList
+- Date
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+### Capítulo 6: Métodos y encapsulamiento
 
-### Jekyll Themes
+- Diseñando métodos
+- varargs
+- Modificadores de acceso
+- Pasando datos a tráves de métodos
+- Sobrecarga
+- Constructores
+- Encapsulamiento
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Luis4609/BecaJava/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-### Support or Contact
+### Capítulo 7: Diseño de clases
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+- Hereencia
+- Clases abstractas
+- Interfaces
+- Polimorfismo
+- Lambdas
+
+### Capítulo 8: Excepciones
+
+
+## Enlaces
+
+- OOP: https://www.ibm.com/docs/es/spss-modeler/SaaS?topic=language-object-oriented-programming
+- Deep copy: https://www.baeldung.com/java-deep-copy
+- Cohesion: https://www.geeksforgeeks.org/cohesion-in-java/
+
+## Teoría: 
+
+- Microservicios AWS: https://aws.amazon.com/es/microservices/
+- Microservicios Red Hat: https://www.redhat.com/es/topics/microservices
+- Microservicios Spring: https://spring.io/microservices
+
+## Teoría: UML
+
+- Diagrama de clases: https://diagramasuml.com/diagrama-de-clases/
+- Dibujar UML: https://moqups.com/es/templates/diagrams-flowcharts/uml-diagrams/class-diagram/
+
