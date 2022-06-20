@@ -77,3 +77,8 @@ Práctica Java en Optimissa
 
 - Diagrama de clases: https://diagramasuml.com/diagrama-de-clases/
 - Dibujar UML: https://moqups.com/es/templates/diagrams-flowcharts/uml-diagrams/class-diagram/
+
+## Java 8 Streams
+
+- https://www.baeldung.com/java-8-streams
+- https://www.baeldung.com/java-8-lambda-expressions-tips
