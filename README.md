@@ -65,6 +65,7 @@ Práctica Java en Optimissa
 - OOP: https://www.ibm.com/docs/es/spss-modeler/SaaS?topic=language-object-oriented-programming
 - Deep copy: https://www.baeldung.com/java-deep-copy
 - Cohesion: https://www.geeksforgeeks.org/cohesion-in-java/
+- Spring MVC guide: https://www.baeldung.com/spring-mvc
 
 ## Teoría: 
 
