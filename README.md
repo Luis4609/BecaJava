@@ -66,6 +66,7 @@ Práctica Java en Optimissa
 - Deep copy: https://www.baeldung.com/java-deep-copy
 - Cohesion: https://www.geeksforgeeks.org/cohesion-in-java/
 - Spring MVC guide: https://www.baeldung.com/spring-mvc
+- Java 8 Best Practices: https://blog.jetbrains.com/idea/2016/07/java-8-top-tips/
 
 ## Teoría: 
 
