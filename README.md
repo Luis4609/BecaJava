@@ -62,6 +62,7 @@ Práctica Java en Optimissa
 > Likewise, in Java, the code can experience errors while executing our instructions. Good exception handling can handle errors and gracefully re-route the program to give the user still a positive experience.
 
 - https://www.baeldung.com/java-exceptions
+- https://www.baeldung.com/java-new-custom-exception
 
 
 ## Enlaces
