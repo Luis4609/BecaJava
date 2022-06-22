@@ -8,6 +8,10 @@
 ### Capítulo 3
 
  - Restricciones y ordenaciones
-  > WHERE, ORDER BY
+  > WHERE, AND, OR, BETWEEN, IN
+  > ORDER BY
+
+  Operadores de comparación
+  
 
 ## Tutoriales:
