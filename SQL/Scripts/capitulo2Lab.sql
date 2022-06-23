@@ -22,8 +22,4 @@ SELECT first_name||' '||last_name AS Full_Name, hire_date FROM HR.employees;
 -- mostrar también el total de días trabajados y el salario por día trabajado, suponiendo que el
 -- salario es 100 veces el anterior valor calculado para el identificador de departamentos. 
 
-SELECT department_id * 1.5 AS Department, manager_id FROM HR.departments;
-
-SELECT employee_id FROM HR.employees;
-
-SELECT (end_date - start_date)* 100 AS Salary FROM HR.job_history;
+SELECT hr.employees.employee_id,  hr.departments.department_id * 1.5 AS Department, (hr.job_history.end_date - hr.job_history.start_date)* 100 AS Salary  FROM HR.employees, HR.job_history, HR.departments;
