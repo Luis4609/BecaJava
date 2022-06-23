@@ -37,8 +37,11 @@ SELECT city, postal_code, postal_code + 100 AS "Codigo Postal Nuevo" FROM HR.loc
 
 -- 7
 SELECT first_name, last_name,
-DECODE(job_id, 'IT_PROG', "Profile IT", "Profile Non-IT") AS Profile 
-FROM HR.employees WHERE job_id = 'IT_PROG';
+    CASE
+    WHEN HR.employees.job_id = 'IT_PROG' then 'Profile IT'
+    ELSE 'Profile Non-IT '
+    END "Profile"
+FROM HR.employees;
 
 
 -- 8
