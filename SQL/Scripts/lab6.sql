@@ -1,11 +1,15 @@
 -- Laboratorio 6
+
+--  Se debe desarrollar una consulta que muestre el ID del jefe de proyecto y el número de 
+-- empleados gestionados por él.
 -- 1
 SELECT e.manager_id, COUNT(e.employee_id) AS "Employes under "
 FROM HR.employees e
 GROUP BY e.manager_id;
 
 -- 2
-
+--  Se debe desarrollar una consulta que muestre el ID del empleado y la fecha cuando terminó su 
+-- trabajo anterior
 SELECT employee_id, max(end_date) FROM HR.job_history 
 GROUP BY employee_id;
 
@@ -41,13 +45,18 @@ FROM HR.job_history
 GROUP BY employee_id
 HAVING COUNT(*)>1;
 
--- 8 NOT FINISH
-SELECT * FROM HR.employees, dual
-WHERE  SYSDATE  - EXTRACT(DAY FROM hire_date) > 100;
+-- 8
+-- Se debe desarrollar una consulta que muestre el ID de los puestos de trabajo que han sido 
+-- ocupados por dos o más empleados por más de 100 días.
+SELECT job_id FROM HR.job_history
+WHERE end_date - start_date > 100
+GROUP BY job_id
+HAVING COUNT(*) >= 2
 
--- YTD = @DATEDIFF ('DD', '2011-01-01', @DATENOW ())
 
 -- 9
+-- Se debe desarrollar una consulta que muestre los departamentos donde algún gestor de proyecto
+-- tiene a su cargo más de 5 empleados
 SELECT manager_id, COUNT(*) AS "Empleados under", department_id 
 FROM HR.employees
 GROUP BY manager_id, department_id
@@ -80,7 +89,7 @@ GROUP BY location_id;
 SELECT department_id, SUM(salary)
 FROM HR.employees 
 GROUP BY department_id
-ORDER BY department_id;
+ORDER BY SUM(salary) DESC;
 
 -- 16
 SELECT EXTRACT(year FROM hire_date), 
@@ -91,15 +100,40 @@ ORDER BY EXTRACT(year FROM hire_date);
 
 
 -- 17 NOT FINISH
-SELECT SUM(salary), MIN(salary)
-FROM HR.employees
+-- Se debe desarrollar una consulta que muestre el salario medio total, el salario mínimo y el 
+-- número máximo de empleados de entre todos los departamentos.
+SELECT COUNT(employee_id), MIN(salary), AVG(salary)
+FROM HR.employees 
+--WHERE ROWNUM <= 1
 GROUP BY department_id
-ORDER BY department_id;
+ORDER BY COUNT(employee_id) DESC;
+
+SELECT COUNT(employee_id), MIN(salary), AVG(salary)
+FROM HR.employees 
+GROUP BY department_id
+HAVING COUNT(*) = (SELECT MAX(COUNT(*)) FROM HR.employees GROUP BY department_id);
+
+SELECT *
+FROM ( SELECT (COUNT(employee_id)), MIN(salary), AVG(salary)
+FROM HR.employees 
+GROUP BY department_id
+ORDER BY COUNT(employee_id) DESC)
+WHERE ROWNUM = 1;
 
 
 -- 18
 SELECT COUNT(*) FROM HR.employees 
 WHERE commission_pct IS NOT NULL
+GROUP BY department_id
+HAVING COUNT(*) > 5;
+
+SELECT department_id, COUNT(*) FROM HR.employees 
+WHERE commission_pct IS NOT NULL AND salary > 10000
+GROUP BY department_id
+HAVING COUNT(*) > 5;
+
+SELECT department_id, COUNT(*) FROM HR.employees 
+WHERE commission_pct IS NOT NULL AND commission_pct > 0.25
 GROUP BY department_id
 HAVING COUNT(*) > 5;
 
@@ -121,13 +155,20 @@ HAVING COUNT(*) = 1
 ORDER BY department_id;
 
 -- 21
-
-SELECT * FROM HR.departments;
-
-SELECT * FROM HR.employees;
+--  Se debe realizar una consulta que liste el número de empleados por ciudad, que ganan como 
+-- mínimo 5000 en concepto de salario. Omita las ciudades que tengan menos de 3 empleados con 
+-- ese salario.
+SELECT department_id, COUNT(*) FROM HR.employees
+WHERE salary > 5000
+GROUP BY department_id
+HAVING COUNT(*) >= 3
+ORDER BY department_id;
 
 -- 22
-SELECT COUNT(*)
+-- Se debe elaborar una consulta que muestre el código del departamento con título “Código del 
+-- departamento”, que cuente los empleados por departamento de aquellos departamentos que 
+-- tengan más de 10 empleados.
+SELECT department_id, COUNT(*)
 FROM HR.employees 
 GROUP BY department_id
 HAVING COUNT(*) > 10;
