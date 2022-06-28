@@ -44,6 +44,7 @@ SELECT first_name, last_name,
 FROM HR.employees;
 
 
+
 -- 8
 -- Se debe desarrollar una consulta que muestre el ID del departamento, año y número de
 -- empleados que se unieron a dicho departamento.

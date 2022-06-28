@@ -90,7 +90,7 @@ WHERE e.hire_date < m.hire_date;
 -- 13 
 SELECT e.first_name, e.job_id FROM HR.employees e 
 INNER JOIN HR.job_history j
-ON(e.job_id = j.job_id )
+ON(e.employee_id = j.employee_id)
 WHERE MONTHS_BETWEEN(j.start_date, j.end_date) < 13;
 
 -- 14
