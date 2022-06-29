@@ -32,3 +32,7 @@ Práctica Java en Optimissa
 ## Módulo SQL:
 
 - Reference Oracle: https://docs.oracle.com/cd/E11882_01/server.112/e41084.pdf
+
+## Módulo JPA:
+
+- https://mkyong.com/spring-boot/spring-boot-spring-data-jpa-oracle-example/
